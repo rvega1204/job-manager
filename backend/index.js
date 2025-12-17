@@ -23,8 +23,7 @@ const corsOptions = {
   origin: function (origin, callback) {
     const allowedOrigins = [
       'http://localhost:5173',
-      'http://localhost:3000',
-      'https://job-manager-r765.vercel.app'
+      'http://localhost:3000'
     ];
 
     // Allow requests with no origin (like mobile apps or curl requests)

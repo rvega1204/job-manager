@@ -18,7 +18,10 @@ const cors = require('cors');
 const app = express();
 
 // Middleware setup
-app.use(cors()); // Enable Cross-Origin Resource Sharing
+app.use(cors({
+  origin: process.env.CORS_ORIGIN || '*',
+  credentials: true
+})); // Enable Cross-Origin Resource Sharing
 app.use(express.json()); // Parse JSON request bodies
 
 // Routes
